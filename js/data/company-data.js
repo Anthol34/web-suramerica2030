@@ -18,12 +18,7 @@ const SuramericaData = {
 
     // Líneas telefónicas disponibles para cotización y contacto
     phoneLines: [
-        { id: "ecuador-central", number: "593967049757", label: "🇪🇨 Central Ecuador (0967049757)", display: "0967049757", country: "EC" },
-        { id: "ecuador-2", number: "593995794663", label: "🇪🇨 Atención Ecuador 2 (0995794663)", display: "0995794663", country: "EC" },
-        { id: "ecuador-3", number: "593987046118", label: "🇪🇨 Atención Ecuador 3 (0987046118)", display: "0987046118", country: "EC" },
-        { id: "venezuela-central", number: "584124102597", label: "🇻🇪 Central Venezuela (0412-4102597)", display: "0412-4102597", country: "VE" },
-        { id: "venezuela-2", number: "584243183220", label: "🇻🇪 Atención Venezuela 2 (0424-3183220)", display: "0424-3183220", country: "VE" },
-        { id: "venezuela-3", number: "584247080651", label: "🇻🇪 Atención Venezuela 3 (0424-7080651)", display: "0424-7080651", country: "VE" }
+        { id: "ecuador-central", number: "593967049757", label: "🇪🇨 Central Ecuador (0967049757)", display: "0967049757", country: "EC" }
     ],
 
     // Opciones del cotizador rápido
@@ -69,13 +64,13 @@ const SuramericaData = {
                     destination: "Cúcuta",
                     countryBadge: "Colombia",
                     badgeClass: "bg-primary-subtle text-primary",
-                    price: 130,
+                    price: 140,
                     currency: "$",
                     isHighlighted: false,
                     btnText: "Reservar a Cúcuta",
                     btnClass: "btn-outline-primary",
                     phone: "593967049757",
-                    whatsappText: "Hola, deseo reservar pasaje desde Ecuador hacia Cúcuta ($130)",
+                    whatsappText: "Hola, deseo reservar pasaje desde Ecuador hacia Cúcuta ($140)",
                     features: [
                         "Transbordo coordinado Tulcán / Ipiales",
                         "1 Maleta de 25 Kg + 10 Kg de mano",
@@ -105,13 +100,13 @@ const SuramericaData = {
                     destination: "Valencia • Maracay • Caracas",
                     countryBadge: "Ruta Completa Venezuela",
                     badgeClass: "bg-danger text-white",
-                    price: 190,
+                    price: 200,
                     currency: "$",
                     isHighlighted: true,
                     btnText: "Reservar Ruta Completa",
                     btnClass: "btn-danger",
                     phone: "593967049757",
-                    whatsappText: "Hola, deseo reservar pasaje desde Ecuador hacia Venezuela (Caracas/Maracay/Valencia $190)",
+                    whatsappText: "Hola, deseo reservar pasaje desde Ecuador hacia Venezuela (Caracas/Maracay/Valencia $200)",
                     features: [
                         "Itinerario completo por tramos conectados",
                         "1 Maleta de 25 Kg + 10 Kg de mano",
@@ -130,13 +125,13 @@ const SuramericaData = {
                     destination: "Hacia Cúcuta",
                     countryBadge: "Conexión Frontera",
                     badgeClass: "bg-primary-subtle text-primary",
-                    price: 55,
+                    price: 60,
                     currency: "$",
                     isHighlighted: false,
                     btnText: "Reservar hacia Cúcuta",
                     btnClass: "btn-outline-primary",
                     phone: "584124102597",
-                    whatsappText: "Hola, deseo información para viajar hacia Cúcuta ($55)",
+                    whatsappText: "Hola, deseo información para viajar hacia Cúcuta ($60)",
                     features: [
                         "Salidas desde Caracas, Maracay y Valencia",
                         "Llegada directa a frontera colombo-venezolana",
@@ -148,13 +143,13 @@ const SuramericaData = {
                     destination: "Quito • Guayaquil • Portoviejo • Manta",
                     countryBadge: "Destino Ecuador",
                     badgeClass: "bg-danger text-white",
-                    price: 190,
+                    price: 200,
                     currency: "$",
                     isHighlighted: true,
                     btnText: "Reservar hacia Ecuador",
                     btnClass: "btn-danger",
                     phone: "584124102597",
-                    whatsappText: "Hola, deseo reservar pasaje desde Venezuela hacia Ecuador ($190)",
+                    whatsappText: "Hola, deseo reservar pasaje desde Venezuela hacia Ecuador ($200)",
                     features: [
                         "Conexión completa hasta tu ciudad en Ecuador",
                         "1 Maleta de 25 Kg + 10 Kg de mano",
