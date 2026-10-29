@@ -30,13 +30,23 @@ const SuramericaOffices = {
             </div>
         `).join('');
 
-        const phonesHTML = officeData.phones.map(phone => `
-            <a href="https://wa.me/${phone.number}" target="_blank" rel="noopener noreferrer" 
-               class="btn-whatsapp-phone">
-                <i class="bi bi-whatsapp"></i>
-                <span>${phone.display}</span>
-            </a>
-        `).join('');
+        // Las líneas directas de WhatsApp se encuentran deshabilitadas por el momento
+        const phonesBoxHTML = (officeData.showPhones && officeData.phones?.length) ? `
+            <div class="office-phones-box mt-3">
+                <span class="small fw-bold d-block mb-2 text-dark">
+                    📱 Líneas directas de WhatsApp:
+                </span>
+                <div class="d-flex flex-wrap gap-2">
+                    ${officeData.phones.map(phone => `
+                        <a href="https://wa.me/${phone.number}" target="_blank" rel="noopener noreferrer" 
+                           class="btn-whatsapp-phone">
+                            <i class="bi bi-whatsapp"></i>
+                            <span>${phone.display}</span>
+                        </a>
+                    `).join('')}
+                </div>
+            </div>
+        ` : '';
 
         container.innerHTML = `
             <div class="office-card">
@@ -45,14 +55,7 @@ const SuramericaOffices = {
                 </div>
                 <div class="card-body p-4">
                     ${locationsHTML}
-                    <div class="office-phones-box mt-3">
-                        <span class="small fw-bold d-block mb-2 text-dark">
-                            📱 Líneas directas de WhatsApp:
-                        </span>
-                        <div class="d-flex flex-wrap gap-2">
-                            ${phonesHTML}
-                        </div>
-                    </div>
+                    ${phonesBoxHTML}
                 </div>
             </div>
         `;

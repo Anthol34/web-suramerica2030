@@ -188,30 +188,28 @@ const SuramericaData = {
             country: "Ecuador",
             flag: "🇪🇨",
             headerTitle: "🇪🇨 Oficinas en Ecuador",
+            showPhones: false, // Desactivado por el momento
             locations: [
                 { city: "Manta (Matriz)", address: "Av. 24 y Calle 17" },
                 { city: "Portoviejo", address: "Terminal Terrestre de Portoviejo" },
                 { city: "Guayaquil", address: "Ciudadela Simón Bolívar" }
             ],
             phones: [
-                { number: "593967049757", display: "0967049757" },
-                { number: "593995794663", display: "0995794663" },
-                { number: "593987046118", display: "0987046118" }
+                { number: "593967049757", display: "0967049757" }
             ]
         },
         venezuela: {
             country: "Venezuela",
             flag: "🇻🇪",
             headerTitle: "🇻🇪 Oficinas en Venezuela",
+            showPhones: false, // Desactivado por el momento
             locations: [
                 { city: "Caracas", address: "Sector San Martín" },
                 { city: "Maracay y Valencia", address: "Puntos de embarque y recepción de encomiendas" },
                 { city: "San Cristóbal", address: "Oficina de conexión fronteriza" }
             ],
             phones: [
-                { number: "584124102597", display: "0412-4102597" },
-                { number: "584243183220", display: "0424-3183220" },
-                { number: "584247080651", display: "0424-7080651" }
+                { number: "584124102597", display: "0412-4102597" }
             ]
         }
     }
