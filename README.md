@@ -1,6 +1,6 @@
 # Suramerica 2030 Internacional — Arquitectura Web Modular
 
-Sitio web informativo oficial modularizado para **Suramerica 2030 Internacional** (Agencia de Viajes, Encomiendas y Valores).
+Sitio web informativo oficial modularizado para **Suramerica 2030 Internacional** (Agencia de Viajes y Transporte Internacional).
 
 ---
 

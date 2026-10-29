@@ -51,7 +51,7 @@ const SuramericaQuoter = {
             `🛫 *Origen:* ${origen}\n` +
             `🛬 *Destino:* ${destino}\n` +
             `📅 *Fecha:* ${fecha}\n` +
-            `👥 *Cantidad:* ${cantidad}\n\n` +
+            `👥 *Pasajeros:* ${cantidad}\n\n` +
             `¿Me pueden ayudar con la disponibilidad y requisitos?`;
 
         const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;

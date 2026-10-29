@@ -12,7 +12,7 @@ const SuramericaData = {
         ruc: "3050310204001",
         facebook: "SURAMERICA 2030",
         defaultPhone: "593967049757",
-        defaultWhatsappText: "Hola Suramerica 2030, deseo cotizar un pasaje o encomienda",
+        defaultWhatsappText: "Hola Suramerica 2030, deseo cotizar un pasaje internacional",
         luggagePolicyWhatsappText: "Hola, tengo una consulta sobre el peso de mi equipaje"
     },
 
@@ -25,8 +25,8 @@ const SuramericaData = {
     quoterOptions: {
         services: [
             { id: "pasaje", label: "🎫 Compra / Reserva de Pasaje", value: "Pasaje Internacional" },
-            { id: "encomienda", label: "📦 Envío de Encomienda / Paquetería", value: "Envío de Encomienda" },
-            { id: "valores", label: "💸 Envío de Valores (Dinero)", value: "Envío de Valores / Remesa" }
+            { id: "fecha-abierta", label: "📅 Boleto con Fecha Abierta", value: "Boleto Fecha Abierta" },
+            { id: "grupal", label: "👥 Viaje Grupal / Familiar", value: "Viaje Grupal / Familiar" }
         ],
         origins: [
             { label: "🇪🇨 Manta", value: "Manta" },
@@ -169,16 +169,16 @@ const SuramericaData = {
             description: "Boletos con asiento asignado o en modalidad de <strong>Fecha Abierta</strong>. Puedes asegurar tu viaje con un abono inicial e ir pagando en cuotas antes de tu fecha de salida."
         },
         {
-            id: "encomiendas",
-            icon: "bi-box-seam-fill",
-            title: "Encomiendas y Paquetería",
-            description: "Envía cajas, documentos, medicinas y paquetes entre nuestras sucursales de Ecuador y Venezuela con registro de peso, detalle de contenido y comprobante con código QR."
+            id: "conexiones",
+            icon: "bi-geo-alt-fill",
+            title: "Rutas y Conexiones Internacionales",
+            description: "Itinerarios coordinados y salidas garantizadas conectando las principales ciudades de Ecuador, Colombia y Venezuela con unidades cómodas y seguras."
         },
         {
-            id: "valores",
-            icon: "bi-cash-coin",
-            title: "Envío de Valores y Remesas",
-            description: "Transferencia y entrega segura de dinero a tus familiares. Registro verificado con documento de identidad del remitente y destinatario para total respaldo."
+            id: "asistencia",
+            icon: "bi-shield-check",
+            title: "Asistencia en Pasos Fronterizos",
+            description: "Acompañamiento y orientación logística permanente en los cruces internacionales de Rumichaca y San Antonio/Cúcuta para que viajes con total respaldo y tranquilidad."
         }
     ],
 
@@ -205,7 +205,7 @@ const SuramericaData = {
             showPhones: false, // Desactivado por el momento
             locations: [
                 { city: "Caracas", address: "Sector San Martín" },
-                { city: "Maracay y Valencia", address: "Puntos de embarque y recepción de encomiendas" },
+                { city: "Maracay y Valencia", address: "Puntos de embarque y atención al pasajero" },
                 { city: "San Cristóbal", address: "Oficina de conexión fronteriza" }
             ],
             phones: [
