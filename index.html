@@ -15,169 +15,38 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Montserrat & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <style>
-        :root {
-            --brand-navy: #0b2b56;
-            --brand-navy-light: #1a437a;
-            --brand-red: #c8102e;
-            --brand-gold: #c59b27;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #1e293b;
-            scroll-behavior: smooth;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        .font-heading {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        /* Navbar */
-        .navbar-custom {
-            background-color: var(--brand-navy);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .navbar-custom .nav-link {
-            color: #e2e8f0;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .navbar-custom .nav-link:hover {
-            color: #ffc107;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, rgba(11, 43, 86, 0.95) 0%, rgba(26, 67, 122, 0.88) 60%, rgba(200, 16, 46, 0.82) 100%),
-                url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-            color: white;
-            padding: 90px 0 80px 0;
-        }
-
-        .badge-gold {
-            background-color: rgba(197, 155, 39, 0.2);
-            border: 1px solid #facc15;
-            color: #fef08a;
-        }
-
-        /* Cotizador Rápido */
-        .quoter-card {
-            background: #ffffff;
-            color: #1e293b;
-            border-radius: 16px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-            border-top: 5px solid var(--brand-red);
-        }
-
-        /* Tarjetas de Rutas */
-        .route-card {
-            border: 1px solid #e2e8f0;
-            border-radius: 14px;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-            overflow: hidden;
-        }
-
-        .route-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 24px rgba(11, 43, 86, 0.12);
-        }
-
-        .price-tag {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--brand-red);
-        }
-
-        /* Píldoras de Pestañas */
-        .nav-pills .nav-link {
-            color: var(--brand-navy);
-            font-weight: 700;
-            border-radius: 50px;
-            padding: 12px 28px;
-            border: 2px solid var(--brand-navy);
-            margin: 0 6px;
-        }
-
-        .nav-pills .nav-link.active {
-            background-color: var(--brand-navy);
-            color: #ffffff;
-        }
-
-        /* Tarjetas de Servicios */
-        .service-icon {
-            width: 64px;
-            height: 64px;
-            border-radius: 14px;
-            background-color: rgba(11, 43, 86, 0.08);
-            color: var(--brand-navy);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Botón Flotante WhatsApp */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            background-color: #25d366;
-            color: white;
-            border-radius: 50px;
-            padding: 12px 22px;
-            font-weight: 700;
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
-            z-index: 1050;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: transform 0.2s;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.05);
-            color: white;
-        }
-
-        footer {
-            background-color: #071d3a;
-            color: #cbd5e1;
-        }
-    </style>
+    <!-- Arquitectura de Estilos Modular -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-    <!-- BARRA DE NAVEGACIÓN -->
+    <!-- ======================================================================
+         COMPONENTE: Barra de Navegación (Navbar)
+         Archivo fuente modular: components/navbar.html | Estilos: css/navbar.css
+         ====================================================================== -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top py-3">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
-                <img src="logo.jpg" alt="Suramerica 2030" style="height: 44px; border-radius: 6px;"
-                    onerror="this.style.display='none'">
+                <img src="logo.jpg" alt="Suramerica 2030" onerror="this.style.display='none'">
                 <div>
-                    <span class="font-heading fw-black tracking-wide text-white" style="font-size: 1.25rem;">SURAMERICA
-                        <span class="text-danger">2030</span></span>
-                    <small class="d-block text-warning"
-                        style="font-size: 0.68rem; letter-spacing: 1px; margin-top: -4px;">INTERNACIONAL AGENCIA DE
-                        VIAJES</small>
+                    <span class="font-heading fw-black tracking-wide text-white" style="font-size: 1.25rem;">
+                        SURAMERICA <span class="text-danger">2030</span>
+                    </span>
+                    <small class="d-block text-warning" style="font-size: 0.68rem; letter-spacing: 1px; margin-top: -4px;">
+                        INTERNACIONAL AGENCIA DE VIAJES
+                    </small>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion"
+                aria-controls="menuNavegacion" aria-expanded="false" aria-label="Abrir menú de navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="menuNavegacion">
@@ -187,10 +56,11 @@
                     <li class="nav-item"><a class="nav-link" href="#equipaje">Equipaje</a></li>
                     <li class="nav-item"><a class="nav-link" href="#oficinas">Oficinas</a></li>
                     <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-                        <a class="btn btn-warning fw-bold text-dark px-3 rounded-pill"
+                        <a class="btn btn-nav-cta px-3 rounded-pill d-inline-flex align-items-center gap-1"
                             href="https://wa.me/593967049757?text=Hola%20Suramerica%202030,%20deseo%20informaci%C3%B3n%20sobre%20un%20viaje"
-                            target="_blank">
-                            <i class="bi bi-whatsapp me-1"></i> Atención Inmediata
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-whatsapp"></i>
+                            <span>Atención Inmediata</span>
                         </a>
                     </li>
                 </ul>
@@ -198,12 +68,17 @@
         </div>
     </nav>
 
-    <!-- HERO Y COTIZADOR RÁPIDO -->
+    <!-- ======================================================================
+         COMPONENTE: Hero y Cotizador Rápido a WhatsApp
+         Archivo fuente modular: components/hero-quoter.html | Estilos: css/hero.css
+         Lógica: js/modules/quoter.js
+         ====================================================================== -->
     <section class="hero-section">
         <div class="container">
             <div class="row align-items-center g-5">
+                <!-- Columna Informativa Principal -->
                 <div class="col-lg-7">
-                    <span class="badge badge-gold rounded-pill px-3 py-2 mb-3 fw-semibold">
+                    <span class="hero-badge-country mb-3">
                         🌎 ECUADOR • COLOMBIA • VENEZUELA
                     </span>
                     <h1 class="display-5 fw-black mb-3">
@@ -214,21 +89,21 @@
                         encomiendas y remesas de valores puerta a puerta.
                     </p>
                     <div class="d-flex flex-wrap gap-3 mb-4">
-                        <div class="d-flex align-items-center gap-2 bg-dark bg-opacity-50 px-3 py-2 rounded-3">
+                        <div class="hero-pill">
                             <i class="bi bi-luggage-fill text-warning fs-4"></i>
                             <div class="small">
                                 <strong>35 KG Incluidos</strong><br>
                                 <span>25 Kg Bodega + 10 Kg Mano</span>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center gap-2 bg-dark bg-opacity-50 px-3 py-2 rounded-3">
+                        <div class="hero-pill">
                             <i class="bi bi-calendar2-check-fill text-warning fs-4"></i>
                             <div class="small">
                                 <strong>Boleto Fecha Abierta</strong><br>
                                 <span>O reserva de asiento fijo</span>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center gap-2 bg-dark bg-opacity-50 px-3 py-2 rounded-3">
+                        <div class="hero-pill">
                             <i class="bi bi-shield-check text-warning fs-4"></i>
                             <div class="small">
                                 <strong>Asistencia Fronteriza</strong><br>
@@ -238,15 +113,15 @@
                     </div>
                 </div>
 
-                <!-- FORMULARIO COTIZADOR DIRECTO A WHATSAPP -->
+                <!-- Formulario Cotizador Directo a WhatsApp -->
                 <div class="col-lg-5">
                     <div class="quoter-card p-4">
                         <h4 class="fw-bold mb-1" style="color: var(--brand-navy);">Cotiza tu Viaje o Envío</h4>
                         <p class="text-muted small mb-3">Recibe atención personalizada al instante por WhatsApp</p>
 
-                        <form onsubmit="enviarCotizacionWhatsApp(event)">
+                        <form id="quoterForm" onsubmit="enviarCotizacionWhatsApp(event)">
                             <div class="mb-3">
-                                <label class="form-label small fw-bold">Tipo de Servicio</label>
+                                <label for="cot_servicio" class="form-label small fw-bold">Tipo de Servicio</label>
                                 <select id="cot_servicio" class="form-select" required>
                                     <option value="Pasaje Internacional">🎫 Compra / Reserva de Pasaje</option>
                                     <option value="Envío de Encomienda">📦 Envío de Encomienda / Paquetería</option>
@@ -255,7 +130,7 @@
                             </div>
                             <div class="row g-2 mb-3">
                                 <div class="col-6">
-                                    <label class="form-label small fw-bold">Ciudad Origen</label>
+                                    <label for="cot_origen" class="form-label small fw-bold">Ciudad Origen</label>
                                     <select id="cot_origen" class="form-select" required>
                                         <option value="Manta">🇪🇨 Manta</option>
                                         <option value="Portoviejo">🇪🇨 Portoviejo</option>
@@ -269,7 +144,7 @@
                                     </select>
                                 </div>
                                 <div class="col-6">
-                                    <label class="form-label small fw-bold">Ciudad Destino</label>
+                                    <label for="cot_destino" class="form-label small fw-bold">Ciudad Destino</label>
                                     <select id="cot_destino" class="form-select" required>
                                         <option value="Caracas">🇻🇪 Caracas</option>
                                         <option value="Maracay">🇻🇪 Maracay</option>
@@ -285,24 +160,23 @@
                             </div>
                             <div class="row g-2 mb-3">
                                 <div class="col-7">
-                                    <label class="form-label small fw-bold">Fecha Estimada</label>
+                                    <label for="cot_fecha" class="form-label small fw-bold">Fecha Estimada</label>
                                     <input type="date" id="cot_fecha" class="form-control">
                                 </div>
                                 <div class="col-5">
-                                    <label class="form-label small fw-bold">Pasajeros / Bultos</label>
-                                    <input type="number" id="cot_cantidad" class="form-control" value="1" min="1"
-                                        max="20">
+                                    <label for="cot_cantidad" class="form-label small fw-bold">Pasajeros / Bultos</label>
+                                    <input type="number" id="cot_cantidad" class="form-control" value="1" min="1" max="20">
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label small fw-bold">¿Con qué oficina deseas hablar?</label>
+                                <label for="cot_linea" class="form-label small fw-bold">¿Con qué oficina deseas hablar?</label>
                                 <select id="cot_linea" class="form-select">
                                     <option value="593967049757">🇪🇨 Central Ecuador (0967049757)</option>
                                     <option value="593995794663">🇪🇨 Atención Ecuador 2 (0995794663)</option>
                                     <option value="584124102597">🇻🇪 Central Venezuela (0412-4102597)</option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-danger w-100 py-2 fw-bold fs-6">
+                            <button type="submit" class="btn btn-quote-submit w-100">
                                 <i class="bi bi-whatsapp me-1"></i> Consultar Disponibilidad Ahora
                             </button>
                         </form>
@@ -312,41 +186,48 @@
         </div>
     </section>
 
-    <!-- CATÁLOGO DE RUTAS Y TARIFAS -->
+    <!-- ======================================================================
+         COMPONENTE: Catálogo de Rutas y Tarifas Oficiales
+         Archivo fuente modular: components/routes.html | Estilos: css/routes.css
+         Datos: js/data/company-data.js | Lógica: js/modules/routes.js
+         ====================================================================== -->
     <section id="rutas" class="py-5 bg-light">
         <div class="container py-3">
             <div class="text-center mb-4">
-                <span class="text-danger fw-bold text-uppercase small">Destinos Internacionales</span>
-                <h2 class="fw-black mt-1" style="color: var(--brand-navy);">Nuestras Rutas y Tarifas Oficiales</h2>
+                <span class="section-subtitle">Destinos Internacionales</span>
+                <h2 class="section-title">Nuestras Rutas y Tarifas Oficiales</h2>
                 <p class="text-muted">Selecciona tu país de salida para ver los precios actualizados e itinerarios</p>
             </div>
 
-            <!-- Pestañas Ecuador / Venezuela -->
-            <ul class="nav nav-pills justify-content-center mb-5" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#salidas-ecuador"
-                        type="button">
-                        🇪🇨 Salidas desde Ecuador
-                    </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#salidas-venezuela" type="button">
-                        🇻🇪 Salidas desde Venezuela
-                    </button>
-                </li>
-            </ul>
+            <!-- Pestañas de Salidas Ecuador / Venezuela -->
+            <div class="text-center mb-5">
+                <ul class="nav routes-nav-pills justify-content-center" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#salidas-ecuador"
+                            type="button" role="tab" aria-controls="salidas-ecuador" aria-selected="true">
+                            🇪🇨 Salidas desde Ecuador
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#salidas-venezuela"
+                            type="button" role="tab" aria-controls="salidas-venezuela" aria-selected="false">
+                            🇻🇪 Salidas desde Venezuela
+                        </button>
+                    </li>
+                </ul>
+            </div>
 
-            <div class="tab-content">
-                <!-- PESTAÑA 1: SALIDAS DESDE ECUADOR -->
-                <div class="tab-pane fade show active" id="salidas-ecuador">
+            <div class="tab-content" id="pills-tabContent">
+                <!-- Pestaña 1: Salidas desde Ecuador -->
+                <div class="tab-pane fade show active" id="salidas-ecuador" role="tabpanel" tabindex="0">
                     <p class="text-center text-muted small mb-4">
                         <i class="bi bi-geo-alt-fill text-danger"></i> Embarques desde: <strong>Manta, Portoviejo,
                             Guayaquil y Quito</strong> (con conexión por Puente Internacional Rumichaca)
                     </p>
-                    <div class="row g-4 justify-content-center">
+                    <div id="salidas-ecuador-cards" class="row g-4 justify-content-center">
                         <!-- Cúcuta -->
                         <div class="col-md-6 col-lg-4">
-                            <div class="card route-card h-100 bg-white p-4">
+                            <div class="card route-card h-100 p-4">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
                                     <div>
                                         <span class="badge bg-primary-subtle text-primary mb-1">Colombia</span>
@@ -354,24 +235,22 @@
                                     </div>
                                     <div class="price-tag">$130</div>
                                 </div>
-                                <hr>
-                                <ul class="list-unstyled small text-secondary mb-4">
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Transbordo
-                                        coordinado Tulcán / Ipiales</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>1 Maleta
-                                        de 25 Kg + 10 Kg de mano</li>
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Opción de reserva con
-                                        abono</li>
+                                <hr class="my-3">
+                                <ul class="list-unstyled feature-list mb-4">
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Transbordo coordinado Tulcán / Ipiales</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>1 Maleta de 25 Kg + 10 Kg de mano</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Opción de reserva con abono</li>
                                 </ul>
                                 <a href="https://wa.me/593967049757?text=Hola,%20deseo%20reservar%20pasaje%20desde%20Ecuador%20hacia%20C%C3%BAcuta%20($130)"
-                                    target="_blank" class="btn btn-outline-primary w-100 fw-bold mt-auto">Reservar a
-                                    Cúcuta</a>
+                                    target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary w-100 fw-bold mt-auto py-2">
+                                    Reservar a Cúcuta
+                                </a>
                             </div>
                         </div>
 
                         <!-- San Cristóbal -->
                         <div class="col-md-6 col-lg-4">
-                            <div class="card route-card h-100 bg-white p-4">
+                            <div class="card route-card h-100 p-4">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
                                     <div>
                                         <span class="badge bg-warning-subtle text-dark mb-1">Venezuela (Frontera)</span>
@@ -379,24 +258,22 @@
                                     </div>
                                     <div class="price-tag">$160</div>
                                 </div>
-                                <hr>
-                                <ul class="list-unstyled small text-secondary mb-4">
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Cruces
-                                        Tulcán/Ipiales y Cúcuta/San Antonio</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>1 Maleta
-                                        de 25 Kg + 10 Kg de mano</li>
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Acompañamiento
-                                        logístico en frontera</li>
+                                <hr class="my-3">
+                                <ul class="list-unstyled feature-list mb-4">
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Cruces Tulcán/Ipiales y Cúcuta/San Antonio</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>1 Maleta de 25 Kg + 10 Kg de mano</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Acompañamiento logístico en frontera</li>
                                 </ul>
                                 <a href="https://wa.me/593967049757?text=Hola,%20deseo%20reservar%20pasaje%20desde%20Ecuador%20hacia%20San%20Crist%C3%B3bal%20($160)"
-                                    target="_blank" class="btn btn-outline-primary w-100 fw-bold mt-auto">Reservar a San
-                                    Cristóbal</a>
+                                    target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary w-100 fw-bold mt-auto py-2">
+                                    Reservar a San Cristóbal
+                                </a>
                             </div>
                         </div>
 
                         <!-- Valencia / Maracay / Caracas -->
                         <div class="col-md-6 col-lg-4">
-                            <div class="card route-card h-100 bg-white p-4 border-danger border-2">
+                            <div class="card route-card h-100 p-4 highlight-card">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
                                     <div>
                                         <span class="badge bg-danger text-white mb-1">Ruta Completa Venezuela</span>
@@ -404,33 +281,31 @@
                                     </div>
                                     <div class="price-tag">$190</div>
                                 </div>
-                                <hr>
-                                <ul class="list-unstyled small text-secondary mb-4">
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Itinerario
-                                        completo por tramos conectados</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>1 Maleta
-                                        de 25 Kg + 10 Kg de mano</li>
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Boleto con QR de
-                                        autenticidad y asiento</li>
+                                <hr class="my-3">
+                                <ul class="list-unstyled feature-list mb-4">
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Itinerario completo por tramos conectados</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>1 Maleta de 25 Kg + 10 Kg de mano</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Boleto con QR de autenticidad y asiento</li>
                                 </ul>
                                 <a href="https://wa.me/593967049757?text=Hola,%20deseo%20reservar%20pasaje%20desde%20Ecuador%20hacia%20Venezuela%20(Caracas/Maracay/Valencia%20$190)"
-                                    target="_blank" class="btn btn-danger w-100 fw-bold mt-auto">Reservar Ruta
-                                    Completa</a>
+                                    target="_blank" rel="noopener noreferrer" class="btn btn-danger w-100 fw-bold mt-auto py-2">
+                                    Reservar Ruta Completa
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- PESTAÑA 2: SALIDAS DESDE VENEZUELA -->
-                <div class="tab-pane fade" id="salidas-venezuela">
+                <!-- Pestaña 2: Salidas desde Venezuela -->
+                <div class="tab-pane fade" id="salidas-venezuela" role="tabpanel" tabindex="0">
                     <p class="text-center text-muted small mb-4">
                         <i class="bi bi-geo-alt-fill text-danger"></i> Embarques desde: <strong>Caracas (San Martín),
                             Maracay, Valencia y San Cristóbal</strong>
                     </p>
-                    <div class="row g-4 justify-content-center">
+                    <div id="salidas-venezuela-cards" class="row g-4 justify-content-center">
                         <!-- Cúcuta desde Venezuela -->
                         <div class="col-md-6 col-lg-5">
-                            <div class="card route-card h-100 bg-white p-4">
+                            <div class="card route-card h-100 p-4">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
                                     <div>
                                         <span class="badge bg-primary-subtle text-primary mb-1">Conexión Frontera</span>
@@ -438,24 +313,22 @@
                                     </div>
                                     <div class="price-tag">$55</div>
                                 </div>
-                                <hr>
-                                <ul class="list-unstyled small text-secondary mb-4">
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Salidas
-                                        desde Caracas, Maracay y Valencia</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Llegada
-                                        directa a frontera colombo-venezolana</li>
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Incluye equipaje de 25
-                                        Kg bodega + 10 Kg mano</li>
+                                <hr class="my-3">
+                                <ul class="list-unstyled feature-list mb-4">
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Salidas desde Caracas, Maracay y Valencia</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Llegada directa a frontera colombo-venezolana</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Incluye equipaje de 25 Kg bodega + 10 Kg mano</li>
                                 </ul>
                                 <a href="https://wa.me/584124102597?text=Hola,%20deseo%20informaci%C3%B3n%20para%20viajar%20hacia%20C%C3%BAcuta%20($55)"
-                                    target="_blank" class="btn btn-outline-primary w-100 fw-bold mt-auto">Reservar hacia
-                                    Cúcuta</a>
+                                    target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary w-100 fw-bold mt-auto py-2">
+                                    Reservar hacia Cúcuta
+                                </a>
                             </div>
                         </div>
 
                         <!-- Ecuador desde Venezuela -->
                         <div class="col-md-6 col-lg-5">
-                            <div class="card route-card h-100 bg-white p-4 border-danger border-2">
+                            <div class="card route-card h-100 p-4 highlight-card">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
                                     <div>
                                         <span class="badge bg-danger text-white mb-1">Destino Ecuador</span>
@@ -463,18 +336,16 @@
                                     </div>
                                     <div class="price-tag">$190</div>
                                 </div>
-                                <hr>
-                                <ul class="list-unstyled small text-secondary mb-4">
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Conexión
-                                        completa hasta tu ciudad en Ecuador</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>1 Maleta
-                                        de 25 Kg + 10 Kg de mano</li>
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Reserva tu cupo con
-                                        abono o pago total</li>
+                                <hr class="my-3">
+                                <ul class="list-unstyled feature-list mb-4">
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Conexión completa hasta tu ciudad en Ecuador</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>1 Maleta de 25 Kg + 10 Kg de mano</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Reserva tu cupo con abono o pago total</li>
                                 </ul>
                                 <a href="https://wa.me/584124102597?text=Hola,%20deseo%20reservar%20pasaje%20desde%20Venezuela%20hacia%20Ecuador%20($190)"
-                                    target="_blank" class="btn btn-danger w-100 fw-bold mt-auto">Reservar hacia
-                                    Ecuador</a>
+                                    target="_blank" rel="noopener noreferrer" class="btn btn-danger w-100 fw-bold mt-auto py-2">
+                                    Reservar hacia Ecuador
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -483,39 +354,43 @@
         </div>
     </section>
 
-    <!-- OTROS SERVICIOS DE LA AGENCIA -->
+    <!-- ======================================================================
+         COMPONENTE: Otros Servicios de la Agencia
+         Archivo fuente modular: components/services.html | Estilos: css/services.css
+         Datos: js/data/company-data.js | Lógica: js/modules/services.js
+         ====================================================================== -->
     <section id="servicios" class="py-5">
         <div class="container py-3">
             <div class="text-center mb-5">
-                <span class="text-danger fw-bold text-uppercase small">Soluciones Integrales</span>
-                <h2 class="fw-black mt-1" style="color: var(--brand-navy);">Más que Pasajes: Conectamos Familias</h2>
+                <span class="section-subtitle">Soluciones Integrales</span>
+                <h2 class="section-title">Más que Pasajes: Conectamos Familias</h2>
             </div>
-            <div class="row g-4">
+            <div id="servicesContainer" class="row g-4">
                 <div class="col-md-4">
-                    <div class="p-4 rounded-4 border h-100 bg-white shadow-sm">
-                        <div class="service-icon"><i class="bi bi-ticket-perforated-fill"></i></div>
+                    <div class="service-card">
+                        <div class="service-icon-box"><i class="bi bi-ticket-perforated-fill"></i></div>
                         <h4 class="fw-bold">Venta de Pasajes y Reservas</h4>
-                        <p class="text-muted small mb-0">
+                        <p class="mb-0">
                             Boletos con asiento asignado o en modalidad de <strong>Fecha Abierta</strong>. Puedes
                             asegurar tu viaje con un abono inicial e ir pagando en cuotas antes de tu fecha de salida.
                         </p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 rounded-4 border h-100 bg-white shadow-sm">
-                        <div class="service-icon"><i class="bi bi-box-seam-fill"></i></div>
+                    <div class="service-card">
+                        <div class="service-icon-box"><i class="bi bi-box-seam-fill"></i></div>
                         <h4 class="fw-bold">Encomiendas y Paquetería</h4>
-                        <p class="text-muted small mb-0">
+                        <p class="mb-0">
                             Envía cajas, documentos, medicinas y paquetes entre nuestras sucursales de Ecuador y
                             Venezuela con registro de peso, detalle de contenido y comprobante con código QR.
                         </p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 rounded-4 border h-100 bg-white shadow-sm">
-                        <div class="service-icon"><i class="bi bi-cash-coin"></i></div>
+                    <div class="service-card">
+                        <div class="service-icon-box"><i class="bi bi-cash-coin"></i></div>
                         <h4 class="fw-bold">Envío de Valores y Remesas</h4>
-                        <p class="text-muted small mb-0">
+                        <p class="mb-0">
                             Transferencia y entrega segura de dinero a tus familiares. Registro verificado con documento
                             de identidad del remitente y destinatario para total respaldo.
                         </p>
@@ -525,14 +400,18 @@
         </div>
     </section>
 
-    <!-- BANNER NORMATIVA DE EQUIPAJE -->
-    <section id="equipaje" class="py-4" style="background-color: var(--brand-navy); color: white;">
-        <div class="container py-3">
+    <!-- ======================================================================
+         COMPONENTE: Banner Normativa de Equipaje
+         Archivo fuente modular: components/baggage.html | Estilos: css/baggage.css
+         ====================================================================== -->
+    <section id="equipaje" class="baggage-section py-5">
+        <div class="container py-2">
             <div class="row align-items-center g-4">
                 <div class="col-lg-8">
-                    <h3 class="fw-bold text-warning mb-2"><i class="bi bi-suitcase2-fill me-2"></i>Política Oficial de
-                        Equipaje</h3>
-                    <p class="mb-0 text-light opacity-90">
+                    <h3 class="fw-bold mb-2">
+                        <i class="bi bi-suitcase2-fill me-2"></i>Política Oficial de Equipaje
+                    </h3>
+                    <p class="mb-0 text-light opacity-90 fs-6">
                         Todo pasajero tiene derecho a llevar <strong>una maleta de 25 KG en bodega</strong> y un
                         <strong>bolso de mano de 10 KG</strong> (35 KG en total incluidos en su boleto). Cada maleta es
                         registrada con etiqueta térmica de seguridad vinculada a su número de boleto y asiento.
@@ -540,55 +419,55 @@
                 </div>
                 <div class="col-lg-4 text-lg-end">
                     <a href="https://wa.me/593967049757?text=Hola,%20tengo%20una%20consulta%20sobre%20el%20peso%20de%20mi%20equipaje"
-                        target="_blank" class="btn btn-outline-warning fw-bold px-4 py-2 rounded-pill">
-                        Consultar Exceso de Equipaje
+                        target="_blank" rel="noopener noreferrer" class="btn-baggage-consult">
+                        <i class="bi bi-whatsapp me-1"></i> Consultar Exceso de Equipaje
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- DIRECTORIO DE OFICINAS Y CONTACTOS -->
+    <!-- ======================================================================
+         COMPONENTE: Directorio de Oficinas y Contactos
+         Archivo fuente modular: components/offices.html | Estilos: css/offices.css
+         Datos: js/data/company-data.js | Lógica: js/modules/offices.js
+         ====================================================================== -->
     <section id="oficinas" class="py-5 bg-light">
         <div class="container py-3">
             <div class="text-center mb-5">
-                <span class="text-danger fw-bold text-uppercase small">Atención Presencial</span>
-                <h2 class="fw-black mt-1" style="color: var(--brand-navy);">Nuestras Sucursales y Puntos de Embarque
-                </h2>
+                <span class="section-subtitle">Atención Presencial</span>
+                <h2 class="section-title">Nuestras Sucursales y Puntos de Embarque</h2>
             </div>
 
             <div class="row g-4">
                 <!-- Sucursales Ecuador -->
-                <div class="col-lg-6">
-                    <div class="card border-0 shadow-sm rounded-4 h-100">
-                        <div class="card-header bg-white border-bottom py-3">
-                            <h5 class="fw-bold mb-0" style="color: var(--brand-navy);">🇪🇨 Oficinas en Ecuador</h5>
+                <div class="col-lg-6" id="officesEcuadorContainer">
+                    <div class="office-card">
+                        <div class="office-card-header">
+                            <h5>🇪🇨 Oficinas en Ecuador</h5>
                         </div>
                         <div class="card-body p-4">
-                            <div class="mb-3 pb-3 border-bottom">
-                                <h6 class="fw-bold mb-1"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Manta
-                                    (Matriz)</h6>
-                                <p class="text-muted small mb-0">Av. 24 y Calle 17</p>
+                            <div class="office-item">
+                                <h6 class="mb-1"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Manta (Matriz)</h6>
+                                <p class="mb-0">Av. 24 y Calle 17</p>
                             </div>
-                            <div class="mb-3 pb-3 border-bottom">
-                                <h6 class="fw-bold mb-1"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Portoviejo
-                                </h6>
-                                <p class="text-muted small mb-0">Terminal Terrestre de Portoviejo</p>
+                            <div class="office-item">
+                                <h6 class="mb-1"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Portoviejo</h6>
+                                <p class="mb-0">Terminal Terrestre de Portoviejo</p>
                             </div>
-                            <div class="mb-4">
-                                <h6 class="fw-bold mb-1"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Guayaquil
-                                </h6>
-                                <p class="text-muted small mb-0">Ciudadela Simón Bolívar</p>
+                            <div class="office-item">
+                                <h6 class="mb-1"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Guayaquil</h6>
+                                <p class="mb-0">Ciudadela Simón Bolívar</p>
                             </div>
-                            <div class="bg-light p-3 rounded-3">
-                                <span class="small fw-bold d-block mb-2">📱 Líneas de WhatsApp Ecuador:</span>
+                            <div class="office-phones-box mt-3">
+                                <span class="small fw-bold d-block mb-2 text-dark">📱 Líneas directas de WhatsApp:</span>
                                 <div class="d-flex flex-wrap gap-2">
-                                    <a href="https://wa.me/593967049757" target="_blank"
-                                        class="btn btn-sm btn-success"><i class="bi bi-whatsapp"></i> 0967049757</a>
-                                    <a href="https://wa.me/593995794663" target="_blank"
-                                        class="btn btn-sm btn-success"><i class="bi bi-whatsapp"></i> 0995794663</a>
-                                    <a href="https://wa.me/593987046118" target="_blank"
-                                        class="btn btn-sm btn-success"><i class="bi bi-whatsapp"></i> 0987046118</a>
+                                    <a href="https://wa.me/593967049757" target="_blank" rel="noopener noreferrer"
+                                        class="btn-whatsapp-phone"><i class="bi bi-whatsapp"></i> 0967049757</a>
+                                    <a href="https://wa.me/593995794663" target="_blank" rel="noopener noreferrer"
+                                        class="btn-whatsapp-phone"><i class="bi bi-whatsapp"></i> 0995794663</a>
+                                    <a href="https://wa.me/593987046118" target="_blank" rel="noopener noreferrer"
+                                        class="btn-whatsapp-phone"><i class="bi bi-whatsapp"></i> 0987046118</a>
                                 </div>
                             </div>
                         </div>
@@ -596,36 +475,33 @@
                 </div>
 
                 <!-- Sucursales Venezuela -->
-                <div class="col-lg-6">
-                    <div class="card border-0 shadow-sm rounded-4 h-100">
-                        <div class="card-header bg-white border-bottom py-3">
-                            <h5 class="fw-bold mb-0" style="color: var(--brand-navy);">🇻🇪 Oficinas en Venezuela</h5>
+                <div class="col-lg-6" id="officesVenezuelaContainer">
+                    <div class="office-card">
+                        <div class="office-card-header">
+                            <h5>🇻🇪 Oficinas en Venezuela</h5>
                         </div>
                         <div class="card-body p-4">
-                            <div class="mb-3 pb-3 border-bottom">
-                                <h6 class="fw-bold mb-1"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Caracas
-                                </h6>
-                                <p class="text-muted small mb-0">Sector San Martín</p>
+                            <div class="office-item">
+                                <h6 class="mb-1"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Caracas</h6>
+                                <p class="mb-0">Sector San Martín</p>
                             </div>
-                            <div class="mb-3 pb-3 border-bottom">
-                                <h6 class="fw-bold mb-1"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Maracay y
-                                    Valencia</h6>
-                                <p class="text-muted small mb-0">Puntos de embarque y recepción de encomiendas</p>
+                            <div class="office-item">
+                                <h6 class="mb-1"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Maracay y Valencia</h6>
+                                <p class="mb-0">Puntos de embarque y recepción de encomiendas</p>
                             </div>
-                            <div class="mb-4">
-                                <h6 class="fw-bold mb-1"><i class="bi bi-geo-alt-fill text-danger me-1"></i> San
-                                    Cristóbal</h6>
-                                <p class="text-muted small mb-0">Oficina de conexión fronteriza</p>
+                            <div class="office-item">
+                                <h6 class="mb-1"><i class="bi bi-geo-alt-fill text-danger me-1"></i> San Cristóbal</h6>
+                                <p class="mb-0">Oficina de conexión fronteriza</p>
                             </div>
-                            <div class="bg-light p-3 rounded-3">
-                                <span class="small fw-bold d-block mb-2">📱 Líneas de WhatsApp Venezuela:</span>
+                            <div class="office-phones-box mt-3">
+                                <span class="small fw-bold d-block mb-2 text-dark">📱 Líneas directas de WhatsApp:</span>
                                 <div class="d-flex flex-wrap gap-2">
-                                    <a href="https://wa.me/584124102597" target="_blank"
-                                        class="btn btn-sm btn-success"><i class="bi bi-whatsapp"></i> 0412-4102597</a>
-                                    <a href="https://wa.me/584243183220" target="_blank"
-                                        class="btn btn-sm btn-success"><i class="bi bi-whatsapp"></i> 0424-3183220</a>
-                                    <a href="https://wa.me/584247080651" target="_blank"
-                                        class="btn btn-sm btn-success"><i class="bi bi-whatsapp"></i> 0424-7080651</a>
+                                    <a href="https://wa.me/584124102597" target="_blank" rel="noopener noreferrer"
+                                        class="btn-whatsapp-phone"><i class="bi bi-whatsapp"></i> 0412-4102597</a>
+                                    <a href="https://wa.me/584243183220" target="_blank" rel="noopener noreferrer"
+                                        class="btn-whatsapp-phone"><i class="bi bi-whatsapp"></i> 0424-3183220</a>
+                                    <a href="https://wa.me/584247080651" target="_blank" rel="noopener noreferrer"
+                                        class="btn-whatsapp-phone"><i class="bi bi-whatsapp"></i> 0424-7080651</a>
                                 </div>
                             </div>
                         </div>
@@ -635,17 +511,23 @@
         </div>
     </section>
 
-    <!-- PIE DE PÁGINA -->
-    <footer class="py-4">
+    <!-- ======================================================================
+         COMPONENTE: Pie de Página (Footer)
+         Archivo fuente modular: components/footer.html | Estilos: css/footer.css
+         ====================================================================== -->
+    <footer class="site-footer py-4">
         <div class="container">
             <div class="row align-items-center gy-3">
                 <div class="col-md-6 text-center text-md-start">
-                    <strong class="text-white">SURAMERICA 2030 S.A. — Servicio de Transporte Internacional</strong><br>
-                    <small class="text-secondary">RUC: 3050310204001 | Facebook: SURAMERICA 2030</small>
+                    <strong class="d-block text-white mb-1">
+                        SURAMERICA 2030 S.A. — Servicio de Transporte Internacional
+                    </strong>
+                    <small class="text-secondary">
+                        RUC: 3050310204001 | Facebook: SURAMERICA 2030
+                    </small>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <!-- Enlace opcional para tu personal hacia el sistema operativo -->
-                    <a href="/auth" class="btn btn-sm btn-outline-secondary text-light">
+                    <a href="/auth" class="btn btn-sm btn-system-access">
                         <i class="bi bi-shield-lock me-1"></i> Acceso Sistema Interno
                     </a>
                 </div>
@@ -653,37 +535,27 @@
         </div>
     </footer>
 
-    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <!-- ======================================================================
+         COMPONENTE: Botón Flotante de WhatsApp
+         Archivo fuente modular: components/whatsapp-float.html | Estilos: css/whatsapp-float.css
+         ====================================================================== -->
     <a href="https://wa.me/593967049757?text=Hola%20Suramerica%202030,%20deseo%20cotizar%20un%20pasaje%20o%20encomienda"
-        target="_blank" class="whatsapp-float">
-        <i class="bi bi-whatsapp fs-4"></i>
+        target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chatear por WhatsApp con un agente">
+        <i class="bi bi-whatsapp"></i>
         <span>Chatear con Agencia</span>
     </a>
 
-    <!-- Scripts -->
+    <!-- Bootstrap 5.3 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function enviarCotizacionWhatsApp(e) {
-            e.preventDefault();
-            const servicio = document.getElementById('cot_servicio').value;
-            const origen = document.getElementById('cot_origen').value;
-            const destino = document.getElementById('cot_destino').value;
-            const fecha = document.getElementById('cot_fecha').value || 'Por definir (Fecha Abierta)';
-            const cantidad = document.getElementById('cot_cantidad').value;
-            const telefono = document.getElementById('cot_linea').value;
 
-            const mensaje = `Hola *Suramerica 2030*, deseo cotizar el siguiente servicio:\n\n` +
-                `📌 *Servicio:* ${servicio}\n` +
-                `🛫 *Origen:* ${origen}\n` +
-                `🛬 *Destino:* ${destino}\n` +
-                `📅 *Fecha:* ${fecha}\n` +
-                `👥 *Cantidad:* ${cantidad}\n\n` +
-                `¿Me pueden ayudar con la disponibilidad y requisitos?`;
-
-            const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-            window.open(url, '_blank');
-        }
-    </script>
+    <!-- Módulos de la Aplicación (Vanilla JS Architecture) -->
+    <script src="js/data/company-data.js"></script>
+    <script src="js/modules/navigation.js"></script>
+    <script src="js/modules/routes.js"></script>
+    <script src="js/modules/services.js"></script>
+    <script src="js/modules/offices.js"></script>
+    <script src="js/modules/quoter.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

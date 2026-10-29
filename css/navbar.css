@@ -1,0 +1,63 @@
+/* ==========================================================================
+   Suramerica 2030 - Navbar Component
+   ========================================================================== */
+
+.navbar-custom {
+    background-color: var(--brand-navy);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transition: background-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.navbar-custom.navbar-scrolled {
+    background-color: rgba(11, 43, 86, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 6px 24px rgba(7, 29, 58, 0.4);
+}
+
+.navbar-custom .navbar-brand {
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+.navbar-custom .navbar-brand img {
+    height: 44px;
+    width: auto;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.navbar-custom .nav-link {
+    color: #e2e8f0;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    border-radius: var(--radius-pill);
+    transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--brand-gold-light);
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.navbar-custom .nav-link.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.12);
+    font-weight: 600;
+}
+
+.navbar-custom .btn-nav-cta {
+    background-color: #ffc107;
+    color: #0b2b56;
+    font-weight: 700;
+    border: none;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.navbar-custom .btn-nav-cta:hover {
+    background-color: #ffcd39;
+    color: #0b2b56;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(255, 193, 7, 0.4);
+}

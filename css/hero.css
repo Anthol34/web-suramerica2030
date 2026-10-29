@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Suramerica 2030 - Hero Section & Quoter Card
+   ========================================================================== */
+
+.hero-section {
+    background: linear-gradient(135deg, rgba(11, 43, 86, 0.95) 0%, rgba(26, 67, 122, 0.88) 60%, rgba(200, 16, 46, 0.82) 100%),
+        url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    color: #ffffff;
+    padding: 90px 0 85px 0;
+    position: relative;
+}
+
+.hero-badge-country {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--brand-gold-subtle);
+    border: 1px solid var(--brand-gold-light);
+    color: #fef08a;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.45rem 1rem;
+    border-radius: var(--radius-pill);
+}
+
+.hero-pill {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: rgba(7, 29, 58, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 10px 16px;
+    border-radius: var(--radius-md);
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.hero-pill:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Quoter Form Card */
+.quoter-card {
+    background: var(--color-surface);
+    color: var(--color-text-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+    border-top: 5px solid var(--brand-red);
+    position: relative;
+    overflow: hidden;
+}
+
+.quoter-card .form-label {
+    color: var(--color-text-primary);
+    font-size: 0.82rem;
+    margin-bottom: 0.35rem;
+}
+
+.quoter-card .form-select,
+.quoter-card .form-control {
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    padding: 0.55rem 0.75rem;
+    font-size: 0.92rem;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.quoter-card .form-select:focus,
+.quoter-card .form-control:focus {
+    border-color: var(--brand-red);
+    box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.15);
+}
+
+.btn-quote-submit {
+    background: linear-gradient(135deg, var(--brand-red) 0%, #dc2626 100%);
+    border: none;
+    color: #ffffff;
+    padding: 0.75rem 1.25rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: var(--radius-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), filter var(--transition-fast);
+}
+
+.btn-quote-submit:hover {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(200, 16, 46, 0.4);
+    color: #ffffff;
+}

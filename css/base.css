@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Suramerica 2030 - Base Styles & Typography
+   ========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6,
+.font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+}
+
+.fw-black {
+    font-weight: 900;
+}
+
+/* Badge Gold Accent */
+.badge-gold {
+    background-color: var(--brand-gold-subtle);
+    border: 1px solid var(--brand-gold-light);
+    color: #fef08a;
+    letter-spacing: 0.05em;
+}
+
+/* Subheadings */
+.section-subtitle {
+    color: var(--brand-red);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 0.4rem;
+}
+
+.section-title {
+    color: var(--brand-navy);
+    font-weight: 900;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin-bottom: 0.5rem;
+}
+
+/* Custom Primary & Accent Buttons */
+.btn-brand-red {
+    background-color: var(--brand-red);
+    color: #ffffff;
+    border: none;
+    font-weight: 700;
+    transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn-brand-red:hover {
+    background-color: var(--brand-red-hover);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(200, 16, 46, 0.35);
+}
+
+/* Smooth Focus States for Accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--brand-red);
+    outline-offset: 2px;
+}

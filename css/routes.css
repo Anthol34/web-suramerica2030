@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Suramerica 2030 - Routes & Tariffs Component
+   ========================================================================== */
+
+/* Nav Pills Custom */
+.routes-nav-pills {
+    display: inline-flex;
+    background: #e2e8f0;
+    padding: 6px;
+    border-radius: var(--radius-pill);
+    gap: 4px;
+}
+
+.routes-nav-pills .nav-link {
+    color: var(--brand-navy);
+    font-weight: 700;
+    border-radius: var(--radius-pill);
+    padding: 10px 24px;
+    border: none;
+    transition: all var(--transition-fast);
+}
+
+.routes-nav-pills .nav-link:hover {
+    color: var(--brand-red);
+}
+
+.routes-nav-pills .nav-link.active {
+    background-color: var(--brand-navy);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(11, 43, 86, 0.25);
+}
+
+/* Route Cards */
+.route-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.route-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--color-border-hover);
+}
+
+.route-card.highlight-card {
+    border: 2px solid var(--brand-red);
+    position: relative;
+}
+
+.route-card .price-tag {
+    font-family: var(--font-heading);
+    font-size: 2.1rem;
+    font-weight: 900;
+    color: var(--brand-red);
+    line-height: 1;
+}
+
+.route-card .price-tag small {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    font-weight: 600;
+}
+
+.route-card .feature-list li {
+    font-size: 0.88rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.route-card .feature-list li i {
+    margin-top: 2px;
+    flex-shrink: 0;
+}

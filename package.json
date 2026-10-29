@@ -1,0 +1,19 @@
+{
+  "name": "web-suramerica2030",
+  "version": "1.0.0",
+  "description": "Sitio web informativo oficial modularizado de Suramerica 2030 Internacional",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx -y serve . -p 3000",
+    "dev": "npx -y serve . -p 3000"
+  },
+  "keywords": [
+    "transporte",
+    "suramerica-2030",
+    "viajes",
+    "encomiendas",
+    "remesas"
+  ],
+  "author": "Suramerica 2030",
+  "license": "ISC"
+}

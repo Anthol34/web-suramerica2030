@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Suramerica 2030 - Baggage Policy Component
+   ========================================================================== */
+
+.baggage-section {
+    background: linear-gradient(135deg, var(--brand-navy) 0%, var(--brand-navy-light) 100%);
+    color: #ffffff;
+    border-top: 3px solid var(--brand-gold);
+    border-bottom: 3px solid var(--brand-gold);
+}
+
+.baggage-section h3 {
+    color: var(--brand-gold-light);
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+}
+
+.btn-baggage-consult {
+    color: var(--brand-gold-light);
+    border: 2px solid var(--brand-gold-light);
+    font-weight: 700;
+    padding: 0.65rem 1.6rem;
+    border-radius: var(--radius-pill);
+    transition: all var(--transition-fast);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-baggage-consult:hover {
+    background-color: var(--brand-gold-light);
+    color: var(--brand-navy);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(250, 204, 21, 0.35);
+}
